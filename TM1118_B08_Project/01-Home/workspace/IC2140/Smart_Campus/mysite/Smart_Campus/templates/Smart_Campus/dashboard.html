@@ -1,0 +1,376 @@
+<!doctype html>
+<HTML>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-
+wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <title>Project IoT</title>
+
+
+</head>
+
+<body>
+    <header>
+        <div class="px-3 py-2 text-bg-dark border-bottom" style="background-color: black;">
+            <div class="container">
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                    <a href="/"
+                        class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor "
+                            class="bi bi-archive-fill" viewBox="0 0 16 16">
+                            <path
+                                d="M12.643 15C13.979 15 15 13.845 15 12.5V5H1v7.5C1 13.845 2.021 15 3.357 15zM5.5 7h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1M.8 1a.8.8 0 0 0-.8.8V3a.8.8 0 0 0 .8.8h14.4A.8.8 0 0 0 16 3V1.8a.8.8 0 0 0-.8-.8z" />
+
+                        </svg>&nbsp Smart Campus</a>
+                    <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+                        <li> <a href="/" class="nav-link text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-house-door" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z" />
+                                </svg>
+                                Home
+                            </a> </li>
+                        <li> <a href="/Log" class="nav-link text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-file-post-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M4.5 3h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1m0 2h7a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-8a.5.5 0 0 1 .5-.5" />
+                                </svg>
+                                Log
+                            </a> </li>
+                        <li> <a href="/dashboard" class="nav-link text-secondary">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-graph-up" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M0 0h1v15h15v1H0zm14.817 3.113a.5.5 0 0 1 .07.704l-4.5 5.5a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61 4.15-5.073a.5.5 0 0 1 .704-.07" />
+                                </svg>
+                                DashBoard
+                            </a> </li>
+                        <li> <a href="/time_event_data/" class="nav-link text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-hourglass-split" viewBox="0 0 16 16">
+                                    <path
+                                        d="M2.5 15a.5.5 0 1 1 0-1h1v-1a4.5 4.5 0 0 1 2.557-4.06c.29-.139.443-.377.443-.59v-.7c0-.213-.154-.451-.443-.59A4.5 4.5 0 0 1 3.5 3V2h-1a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1h-1v1a4.5 4.5 0 0 1-2.557 4.06c-.29.139-.443.377-.443.59v.7c0 .213.154.451.443.59A4.5 4.5 0 0 1 12.5 13v1h1a.5.5 0 0 1 0 1zm2-13v1c0 .537.12 1.045.337 1.5h6.326c.216-.455.337-.963.337-1.5V2zm3 6.35c0 .701-.478 1.236-1.011 1.492A3.5 3.5 0 0 0 4.5 13s.866-1.299 3-1.48zm1 0v3.17c2.134.181 3 1.48 3 1.48a3.5 3.5 0 0 0-1.989-3.158C8.978 9.586 8.5 9.052 8.5 8.351z" />
+                                </svg>
+                                Time-Event-Data
+                            </a> </li>
+                        <li> <a href="/Data_analysis/" class="nav-link text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-eyeglasses" viewBox="0 0 16 16">
+                                    <path
+                                        d="M4 6a2 2 0 1 1 0 4 2 2 0 0 1 0-4m2.625.547a3 3 0 0 0-5.584.953H.5a.5.5 0 0 0 0 1h.541A3 3 0 0 0 7 8a1 1 0 0 1 2 0 3 3 0 0 0 5.959.5h.541a.5.5 0 0 0 0-1h-.541a3 3 0 0 0-5.584-.953A2 2 0 0 0 8 6c-.532 0-1.016.208-1.375.547M14 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0" />
+                                </svg>
+                                Data Analysis
+                            </a> </li>
+                        <li>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container my-1">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-chevron p-3 bg-body-tertiary rounded-3">
+                <li class="breadcrumb-item"> <a class="link-body-emphasis" href="/"> <svg
+                            xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-house-door" viewBox="0 0 16 16">
+                            <path
+                                d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z" />
+                        </svg> <span class="visually-hidden">Home</span> </a> </li>
+                <li class="breadcrumb-item active" aria-current="page">
+                    DashBoard
+                </li>
+            </ol>
+        </nav>
+    </div>
+    <div class="container my-3">
+        <form method="POST" action="">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-md-4">
+                    <label for="start_date" class="form-label">Start Date</label>
+                    <input type="datetime-local" name="start_date" class="form-control" id="start_date"
+                        value="{{ form.start_date.value|default_if_none:'' }}">
+                </div>
+                <div class="col-md-4">
+                    <label for="end_date" class="form-label">End Date</label>
+                    <input type="datetime-local" name="end_date" class="form-control" id="end_date"
+                        value="{{ form.end_date.value|default_if_none:'' }}">
+                </div>
+                <div class="col-md-4 align-self-end">
+                    <button type="submit" class="btn btn-primary">Filter</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <br>
+    <br>
+
+    <script src="https://cdn.flexmonster.com/flexmonster.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> 
+
+    <div id="pivot-container_1H" style="width: 100%; height: 500px;">
+        <script>
+            let pivot; // Declare pivot variable for global access
+    
+            document.addEventListener('DOMContentLoaded', function () {
+                try {
+                    const eventsData = JSON.parse('{{ events_json|escapejs }}');
+    
+                    console.log("Raw Events Data:", eventsData); // Log raw data
+    
+                    if (!Array.isArray(eventsData) || eventsData.length === 0) {
+                        console.warn("No events data available.");
+                        return; // Exit if no data to display
+                    }
+    
+                    // Create a temporary object to aggregate counts by time interval
+                    const aggregatedData = {};
+    
+                    eventsData.forEach(item => {
+                        const fields = item.fields;
+                        if (fields) {
+                            const dateCreated = new Date(fields.date_created).toISOString().slice(0, 13) + ":00:00"; // Hourly grouping
+                            const nodeId = fields.node_id || 'Unknown';
+                            const loc = fields.loc || 'Unknown';
+                            const temp = parseFloat(fields.temp) || 0;
+                            const hum = parseFloat(fields.hum) || 0;
+                            const light = parseInt(fields.light, 10) || 0;
+                            const snd = parseInt(fields.snd, 10) || 0;
+    
+                            // Initialize if not already present
+                            if (!aggregatedData[dateCreated]) {
+                                aggregatedData[dateCreated] = {};
+                            }
+                            
+                            // Initialize node if not already present
+                            if (!aggregatedData[dateCreated][nodeId]) {
+                                aggregatedData[dateCreated][nodeId] = {
+                                    loc: loc,
+                                    temp: 0,
+                                    hum: 0,
+                                    light: 0,
+                                    snd: 0,
+                                    count: 0 // Initialize count
+                                };
+                            }
+    
+                            // Aggregate values
+                            aggregatedData[dateCreated][nodeId].temp += temp;
+                            aggregatedData[dateCreated][nodeId].hum += hum;
+                            aggregatedData[dateCreated][nodeId].light += light;
+                            aggregatedData[dateCreated][nodeId].snd += snd;
+                            aggregatedData[dateCreated][nodeId].count += 1; // Increment count
+                        }
+                    });
+    
+                    // Create an array of time intervals
+                    const timeIntervals = [];
+                    const startTime = new Date(Math.min(...eventsData.map(item => new Date(item.fields.date_created))));
+                    const endTime = new Date(Math.max(...eventsData.map(item => new Date(item.fields.date_created))));
+                    
+                    for (let dt = startTime; dt <= endTime; dt.setHours(dt.getHours() + 1)) {
+                        timeIntervals.push(dt.toISOString().slice(0, 13) + ":00:00");
+                    }
+    
+                    // Fill missing intervals
+                    const processedData = [];
+                    timeIntervals.forEach(date => {
+                        if (aggregatedData[date]) {
+                            Object.keys(aggregatedData[date]).forEach(nodeId => {
+                                const data = aggregatedData[date][nodeId];
+                                processedData.push({
+                                    date_created: date,
+                                    node_id: nodeId,
+                                    loc: data.loc,
+                                    temp: data.temp / (data.count || 1), // Average temperature
+                                    hum: data.hum / (data.count || 1),     // Average humidity
+                                    light: data.light / (data.count || 1), // Average light intensity
+                                    snd: data.snd / (data.count || 1),     // Average sound level
+                                    event_count: data.count                  // Count of events
+                                });
+                            });
+                        } else {
+                            // Handle missing nodes for this interval
+                            for (const nodeId of Object.keys(aggregatedData[date] || {})) {
+                                processedData.push({
+                                    date_created: date,
+                                    node_id: nodeId,
+                                    loc: aggregatedData[date][nodeId].loc,
+                                    temp: 0,
+                                    hum: 0,
+                                    light: 0,
+                                    snd: 0,
+                                    event_count: 0 // Set to zero for missing intervals
+                                });
+                            }
+                        }
+                    });
+    
+                    console.log("Processed Data:", processedData); // Log processed data
+    
+                    // Initialize Flexmonster
+                    pivot = new Flexmonster({
+                        container: "#pivot-container_1H",
+                        componentFolder: "https://cdn.flexmonster.com/",
+                        report: {
+                            dataSource: {
+                                data: processedData,
+                                mapping: {
+                                    "node_id": { "caption": "Node ID", "type": "string" },
+                                    "loc": { "caption": "Location", "type": "string" },
+                                    "temp": { "caption": "Temperature", "type": "number" },
+                                    "hum": { "caption": "Humidity", "type": "number" },
+                                    "light": { "caption": "Light Intensity", "type": "number" },
+                                    "snd": { "caption": "Sound Level", "type": "number" },
+                                    "date_created": { "caption": "Created Date", "interval": "1h", "type": "datetime" },
+                                    "event_count": { "caption": "Event Count", "type": "number" }, // New field for event count
+                                }
+                            },
+                            slice: {
+                                rows: [
+                                    { uniqueName: "date_created" },
+                                ],
+                                columns: [
+                                    { uniqueName: "loc" },
+                                    { uniqueName: "node_id" },
+                                    { uniqueName: "[measures]" },
+                                ],
+                                measures: [
+                                    { uniqueName: "temp", label: "Temperature", format: "degree", aggregation: "avg" },
+                                    { uniqueName: "hum", label: "Humidity", aggregation: "avg" },
+                                    { uniqueName: "light", label: "Light Intensity", aggregation: "avg" },
+                                    { uniqueName: "snd", label: "Sound Level", aggregation: "avg" },
+                                    { uniqueName: "event_count", label: "Number of Events", aggregation: "sum" }, // Sum of events over the interval
+                                ],
+                            },
+                            options: {
+                                viewType: "charts",
+                                chart: {
+                                    type: "line",
+                                },
+                                showAggregationLabels: false,
+                            }
+                        }
+                    });
+                } catch (error) {
+                    console.error("Error initializing Flexmonster:", error);
+                }
+            });
+    
+            // Function to group dates based on the interval
+            function groupDates(interval) {
+                let report = pivot.getReport();
+                report.dataSource.mapping["date_created"].interval = interval; // Change the interval
+                pivot.setReport(report); // Update the report
+            }
+        </script>
+    </div>   
+
+    <div id="pivot-container" style="width: 100%; height: 500px;">
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                try {
+                    const eventsData = JSON.parse('{{ events_json|escapejs }}');
+
+                    console.log(eventsData); // Check the raw JSON data
+
+                    if (!Array.isArray(eventsData) || eventsData.length === 0) {
+                        console.warn("No events data available.");
+                        return; // Exit if no data to display
+                    }
+
+                    // Process the data to the format Flexmonster needs
+                    const processedData = eventsData.map(item => {
+                        const fields = item.fields;
+                        if (fields) {
+                            return {
+                                node_id: fields.node_id,
+                                loc: fields.loc,
+                                temp: parseFloat(fields.temp) || 0,
+                                hum: parseFloat(fields.hum) || 0,
+                                light: parseInt(fields.light, 10) || 0,
+                                snd: parseInt(fields.snd, 10) || 0,
+                                date_created: fields.date_created,
+                                date: fields.date,
+                                time: fields.time
+                            };
+                        }
+                        return null;
+                    }).filter(item => item !== null); // Remove null values
+
+                    console.log(processedData); // Check the processed data
+
+                    new Flexmonster({
+                        container: "#pivot-container",
+                        componentFolder: "https://cdn.flexmonster.com/",
+                        report: {
+                            dataSource: {
+                                data: processedData,
+                                mapping: {
+                                    "node_id": { "caption": "Node ID", "type": "string" },
+                                    "loc": { "caption": "Location", "type": "string" },
+                                    "temp": { "caption": "Temperature", "type": "number" },
+                                    "hum": { "caption": "Humidity", "type": "number" },
+                                    "light": { "caption": "Light Intensity", "type": "number" },
+                                    "snd": { "caption": "Sound Level", "type": "number" },
+                                    "date_created": { "caption": "Created Date", "type": "datetime" },
+                                }
+                            },
+                            slice: {
+                                rows: [
+                                    { uniqueName: "date_created" },
+                                ],
+                                columns: [
+                                    { uniqueName: "loc" },
+                                    { uniqueName: "node_id" },
+                                    { uniqueName: "[measures]" },
+                                ],
+                                measures: [
+                                    { uniqueName: "temp", label: "Temperature", format: "degree" },
+                                    { uniqueName: "hum", label: "Humidity" },
+                                    { uniqueName: "light", label: "Light Intensity" },
+                                    { uniqueName: "snd", label: "Sound Level" },
+                                ],
+                            },
+                            options: {
+                                viewType: "charts",
+                                chart: {
+                                    type: "line",
+                                },
+                                showAggregationLabels: false,
+                            }
+                        }
+                    });
+                } catch (error) {
+                    console.error("Error initializing Flexmonster:", error);
+                }
+            });
+        </script>
+    </div>
+
+
+    <footer class="py-4 my-5 bg-light shadow-sm">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item">
+                <a href="#" class="nav-link px-3 text-dark">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="/Log" class="nav-link px-3 text-dark">Log</a>
+            </li>
+            <li class="nav-item">
+                <a href="/dashboard/" class="nav-link px-3 text-dark">DashBoard</a>
+            </li>
+            <li class="nav-item">
+                <a href="/time_event_data/" class="nav-link px-3 text-dark">Time-Event-Data</a>
+            </li>
+            <li class="nav-item">
+                <a href="/Data_analysis/" class="nav-link px-3 text-dark">Data Analysis</a>
+            </li>
+        </ul>
+        <p class="text-center text-muted">- presented by Group 8 -</p>
+    </footer>
+
+</body>
+
+</HTML>
